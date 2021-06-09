@@ -132,6 +132,7 @@ main{
     .card__details{
         width: 100%;
     }
+
 }
 
 @media screen and (max-width : 500px){
@@ -142,8 +143,12 @@ main{
     .card__details{
         flex-direction: column;
     }
-
+    
     .card__detail:not(:last-child){
         margin-bottom: 5rem;
+    }
+    
+    .card__picture{
+        background-image: url(./images/image-header-mobile.jpg);
     }
 }
