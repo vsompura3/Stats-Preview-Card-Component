@@ -23,7 +23,7 @@ The designs were created to the following widths:
 
 ## Typography
 
-### Body Copy
+### Body Copys
 
 - Font size: 15px
 
