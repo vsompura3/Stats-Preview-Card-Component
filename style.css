@@ -32,7 +32,118 @@ body{
     box-sizing: border-box;
 }
 
+li{
+    list-style-type: none;
+}
 
+main{
+    color: var(--clr-white);
+    background-color: var(--clr-very-dark-blue);
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.card{
+    background-color: var(--clr-dark-saturated-blue);
+    border-radius: .5rem;
+    overflow: hidden;
+    /* height: 50rem; */
+    display: flex;
+}
 
+.card__textbox{
+    padding: 5rem;
+}
 
+.card__heading{
+    color: var(--clr-white-heading);
+    font-family: var(--ff-primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.25;
+}
+
+.card__heading--accent{
+    color: var(--clr-soft-violet);
+}
+
+.card__paragraph{
+    color: var(--clr-white-paragraph);
+    font-size: 1.25rem;
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    width: 75%;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
+.card__details{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.value{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.info{
+    color: var(--clr-white-paragraph);
+    font-size: 1.15rem;
+    font-family: var(--ff-secondary);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card__picture{
+    min-height: 25rem;
+    background-color: var(--clr-soft-violet);
+    background-image: url(./images/image-header-desktop.jpg);
+    background-position: top;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100%;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width : 900px){
+    .card{
+        flex-direction: column;
+        margin: 10rem 2rem;
+    }
+
+    .card__textbox{
+        /* padding: 5rem 10rem; */
+        order: 5;
+        text-align: center;
+    }
+
+    .card__paragraph{
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .card__details{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 500px){
+    main{
+        padding: 5rem 0; 
+    }
+
+    .card__details{
+        flex-direction: column;
+    }
+
+    .card__detail:not(:last-child){
+        margin-bottom: 5rem;
+    }
+}
